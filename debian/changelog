@@ -1,3 +1,9 @@
+luajit (2.0.0~beta11+git20121024-1) unstable; urgency=low
+
+  * Updated to latest HEAD c7990063
+
+ -- Alex Bradbury <asb@asbradbury.org>  Sun, 28 Oct 2012 22:06:51 +0000
+
 luajit (2.0.0~beta10+git20120912-1) unstable; urgency=low
 
   * Update to latest HEAD aed200937815
