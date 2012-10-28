@@ -1,16 +1,16 @@
 Index: luajit2-debian/src/luaconf.h
 ===================================================================
---- luajit2-debian.orig/src/luaconf.h	2012-10-28 22:45:05.727500391 +0000
-+++ luajit2-debian/src/luaconf.h	2012-10-28 22:45:09.323525233 +0000
-@@ -30,6 +30,7 @@
+--- luajit2-debian.orig/src/luaconf.h	2012-10-28 22:53:08.890838427 +0000
++++ luajit2-debian/src/luaconf.h	2012-10-28 22:55:04.559637553 +0000
+@@ -34,6 +34,7 @@
  #define LUA_XPATH \
    ";" LUA_XROOT "share/lua/5.1/?.lua;" LUA_XROOT "share/lua/5.1/?/init.lua"
  #define LUA_XCPATH	LUA_XROOT "lib/lua/5.1/?.so;"
 +#define LUA_MULTIARCH_CPATH LUA_XROOT "lib/" DEB_HOST_MULTIARCH "/lua/5.1/?.so;"
  #else
- #define LUA_JDIR	LUA_ROOT "share/luajit-2.0.0-beta10/"
+ #define LUA_JDIR	LUA_ROOT "share/luajit-2.0.0-beta11/"
  #define LUA_XPATH
-@@ -38,7 +39,7 @@
+@@ -42,7 +43,7 @@
  #define LUA_PATH_DEFAULT \
    "./?.lua;" LUA_JDIR"?.lua;" LUA_LDIR"?.lua;" LUA_LDIR"?/init.lua" LUA_XPATH
  #define LUA_CPATH_DEFAULT \
@@ -21,8 +21,8 @@ Index: luajit2-debian/src/luaconf.h
  /* Environment variable names for path overrides and initialization code. */
 Index: luajit2-debian/Makefile
 ===================================================================
---- luajit2-debian.orig/Makefile	2012-10-28 22:45:05.751500556 +0000
-+++ luajit2-debian/Makefile	2012-10-28 22:45:09.323525233 +0000
+--- luajit2-debian.orig/Makefile	2012-10-28 22:53:08.890838427 +0000
++++ luajit2-debian/Makefile	2012-10-28 22:55:04.559637553 +0000
 @@ -146,7 +146,7 @@
  
  amalg:
@@ -34,8 +34,8 @@ Index: luajit2-debian/Makefile
  	$(MAKE) -C src clean
 Index: luajit2-debian/src/Makefile
 ===================================================================
---- luajit2-debian.orig/src/Makefile	2012-10-28 22:45:05.699500199 +0000
-+++ luajit2-debian/src/Makefile	2012-10-28 22:45:09.323525233 +0000
+--- luajit2-debian.orig/src/Makefile	2012-10-28 22:53:08.890838427 +0000
++++ luajit2-debian/src/Makefile	2012-10-28 22:55:04.559637553 +0000
 @@ -88,7 +88,7 @@
  ##############################################################################
  # Enable/disable these features as needed, but make sure you force a full
