@@ -1,7 +1,7 @@
-Index: luajit-2.0/src/luaconf.h
+Index: luajit2-debian/src/luaconf.h
 ===================================================================
---- luajit-2.0.orig/src/luaconf.h	2012-08-11 22:19:29.673542303 +0000
-+++ luajit-2.0/src/luaconf.h	2012-08-11 22:31:19.103541864 +0000
+--- luajit2-debian.orig/src/luaconf.h	2012-10-28 22:45:05.727500391 +0000
++++ luajit2-debian/src/luaconf.h	2012-10-28 22:45:09.323525233 +0000
 @@ -30,6 +30,7 @@
  #define LUA_XPATH \
    ";" LUA_XROOT "share/lua/5.1/?.lua;" LUA_XROOT "share/lua/5.1/?/init.lua"
@@ -19,10 +19,10 @@ Index: luajit-2.0/src/luaconf.h
  #endif
  
  /* Environment variable names for path overrides and initialization code. */
-Index: luajit-2.0/Makefile
+Index: luajit2-debian/Makefile
 ===================================================================
---- luajit-2.0.orig/Makefile	2012-08-11 22:19:29.653542303 +0000
-+++ luajit-2.0/Makefile	2012-08-11 22:31:19.103541864 +0000
+--- luajit2-debian.orig/Makefile	2012-10-28 22:45:05.751500556 +0000
++++ luajit2-debian/Makefile	2012-10-28 22:45:09.323525233 +0000
 @@ -146,7 +146,7 @@
  
  amalg:
@@ -32,10 +32,10 @@ Index: luajit-2.0/Makefile
  
  clean:
  	$(MAKE) -C src clean
-Index: luajit-2.0/src/Makefile
+Index: luajit2-debian/src/Makefile
 ===================================================================
---- luajit-2.0.orig/src/Makefile	2012-08-11 22:19:29.653542303 +0000
-+++ luajit-2.0/src/Makefile	2012-08-11 22:31:19.103541864 +0000
+--- luajit2-debian.orig/src/Makefile	2012-10-28 22:45:05.699500199 +0000
++++ luajit2-debian/src/Makefile	2012-10-28 22:45:09.323525233 +0000
 @@ -88,7 +88,7 @@
  ##############################################################################
  # Enable/disable these features as needed, but make sure you force a full
